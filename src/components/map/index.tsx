@@ -1,6 +1,5 @@
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
 
-import "leaflet/dist/leaflet.css";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
