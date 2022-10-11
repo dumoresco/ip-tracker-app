@@ -1,4 +1,4 @@
-import { MapContainer, Marker, TileLayer } from "react-leaflet/lib";
+import { MapContainer, Marker, TileLayer } from "react-leaflet";
 
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
@@ -10,14 +10,18 @@ interface MapBoxProps {
 }
 const MapBox: React.FC<MapBoxProps> = ({ latitude, longitude, isLoading }) => {
   return (
-    <div className=" absolute bottom-0 h-screen w-screen z-[-99999]">
+    <div className=" absolute bottom-0 h-screen w-screen z-[-99999] ">
       {isLoading ? (
-        <Skeleton width={"100vw"} height={"100vh"} />
+        <Skeleton width={"100vw"} height={"150vh"} />
       ) : (
         <MapContainer
           center={[latitude, longitude]}
           zoom={13}
-          style={{ height: "100vh", width: "100vw", zIndex: -9999 }}
+          style={{
+            height: "150vh",
+            width: "100vw",
+            zIndex: -9999,
+          }}
           doubleClickZoom={false}
           scrollWheelZoom={false}
           attributionControl={false}
